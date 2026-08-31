@@ -1,0 +1,136 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+}
+
+/* Header & Navbar */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.brandIcon {
+  width: 32px;
+  height: 32px;
+  background-color: #2563eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.navLinks {
+  display: none;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+@media (min-width: 860px) {
+  .navLinks {
+    display: flex;
+  }
+}
+
+.navItem {
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color 0.2s;
+}
+
+.navItem:hover {
+  color: #0f172a;
+}
+
+.navActive {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.navActive::after {
+  content: "";
+  position: absolute;
+  bottom: -0.85rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #2563eb;
+  border-radius: 2px;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatarBtn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: color 0.2s;
+}
+
+.avatarBtn:hover {
+  color: #0f172a;
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
