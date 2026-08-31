@@ -35,6 +35,7 @@
   }
 }
 
+/* Badge Biru Dimiringkan Presisi & Diberi Shadow */
 .heroBadge {
   background-color: #2563eb;
   color: #ffffff;
@@ -45,6 +46,9 @@
   margin-top: 0.75rem;
   margin-bottom: 1.5rem;
   border-radius: 0.375rem;
+  transform: rotate(-2.5deg);
+  transform-origin: left center;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 @media (min-width: 768px) {
@@ -86,6 +90,7 @@
   gap: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(191, 219, 254, 0.5);
   transition: background-color 0.2s;
+  text-decoration: none;
 }
 
 .btnPrimary:hover {
@@ -97,6 +102,7 @@
   font-weight: 600;
   font-size: 0.875rem;
   padding: 0.75rem 1rem;
+  text-decoration: none;
 }
 
 .btnSecondary:hover {
@@ -111,9 +117,10 @@
   align-items: center;
 }
 
+/* Ukuran Gambar Koper Diperbesar */
 .heroImage {
   width: 100%;
-  max-width: 28rem;
+  max-width: 36rem;
   height: auto;
   object-fit: contain;
 }
@@ -329,6 +336,8 @@
   font-weight: 800;
   color: #111827;
   margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -346,6 +355,8 @@
   max-width: 36rem;
   margin: 0 auto 4rem auto;
   font-size: 0.875rem;
+  text-align: center;
+  width: 100%;
 }
 
 .stepsContainer {
@@ -434,7 +445,6 @@
   }
 }
 
-/* Container pembungkus utama di dalam section fitur */
 .featuresContainer {
   max-width: 80rem;
   margin: 0 auto;
@@ -445,36 +455,6 @@
   width: 100%;
 }
 
-/* Judul & Subtitle dipaksa rata tengah secara eksplisit */
-.sectionTitle {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #111827;
-  margin-bottom: 1rem;
-  text-align: center;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .sectionTitle {
-    font-size: 2.25rem;
-  }
-}
-
-.highlightBlue {
-  color: #2563eb;
-}
-
-.sectionSubtitle {
-  color: #6b7280;
-  max-width: 36rem;
-  margin: 0 auto 4rem auto;
-  font-size: 0.875rem;
-  text-align: center;
-  width: 100%;
-}
-
-/* Grid Kartu Fitur */
 .featuresGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -494,24 +474,73 @@
   }
 }
 
-/* Kartu Fitur Rata Tengah Presisi */
 .featureCard {
   background-color: #ffffff;
-  padding: 2rem;
+  padding: 2.5rem 1.5rem;
   border-radius: 1.5rem;
   border: 1px solid rgba(243, 244, 246, 0.8);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 100%;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .featureCard:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Pembungkus Ikon Bulat Pastel */
+.cardIconBlue {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #dbeafe;
+  color: #2563eb;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.cardIconEmerald {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #d1fae5;
+  color: #059669;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.cardIconAmber {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #fef3c7;
+  color: #d97706;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.cardIconPurple {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #f3e8ff;
+  color: #9333ea;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .cardTitle {
@@ -606,6 +635,11 @@
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.footerLink {
+  color: #9ca3af;
+  text-decoration: none;
 }
 
 .footerLink:hover {

@@ -168,7 +168,6 @@ const LandingPage = () => {
 
       {/* Main Features Section */}
       <section id="fitur" className={styles.featuresSection}>
-        {/* Menggunakan styles.featuresContainer agar styling CSS Module terbaca penuh */}
         <div className={styles.featuresContainer}>
           <h2 className={styles.sectionTitle}>
             Fitur <span className={styles.highlightBlue}>Unggulan</span> Kami
@@ -181,7 +180,7 @@ const LandingPage = () => {
             {/* Card 1 */}
             <div className={styles.featureCard}>
               <div className={styles.cardIconBlue}>
-                <FileSearch className="w-7 h-7" />
+                <FileSearch className="w-6 h-6" />
               </div>
               <h3 className={styles.cardTitle}>CV Analyzer</h3>
               <p className={styles.cardDesc}>
@@ -192,7 +191,7 @@ const LandingPage = () => {
             {/* Card 2 */}
             <div className={styles.featureCard}>
               <div className={styles.cardIconEmerald}>
-                <UserCheck className="w-7 h-7" />
+                <UserCheck className="w-6 h-6" />
               </div>
               <h3 className={styles.cardTitle}>Profile Builder</h3>
               <p className={styles.cardDesc}>
@@ -203,7 +202,7 @@ const LandingPage = () => {
             {/* Card 3 */}
             <div className={styles.featureCard}>
               <div className={styles.cardIconAmber}>
-                <Briefcase className="w-7 h-7" />
+                <Briefcase className="w-6 h-6" />
               </div>
               <h3 className={styles.cardTitle}>Job Analyzer</h3>
               <p className={styles.cardDesc}>
@@ -214,7 +213,7 @@ const LandingPage = () => {
             {/* Card 4 */}
             <div className={styles.featureCard}>
               <div className={styles.cardIconPurple}>
-                <Sparkles className="w-7 h-7" />
+                <Sparkles className="w-6 h-6" />
               </div>
               <h3 className={styles.cardTitle}>Match & Priority</h3>
               <p className={styles.cardDesc}>
