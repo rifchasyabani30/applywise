@@ -2,17 +2,32 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, Wallet, Briefcase, MapPin } from "lucide-react";
+import { 
+  CheckCircle2, 
+  ArrowRight, 
+  Wallet, 
+  Briefcase, 
+  MapPin, 
+  FileUp, 
+  Image as ImageIcon 
+} from "lucide-react";
 import styles from "./form-job.module.css";
 
 export default function FormJobPage() {
   const [activeTab, setActiveTab] = useState<"text" | "pdf" | "screenshot">("text");
   const [description, setDescription] = useState("");
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setSelectedFile(e.target.files[0]);
+    }
+  };
 
   return (
     <div className={styles.container}>
       <div className={styles.inner}>
-        {/* Header Section with Floating Pills */}
+        {/* Header Section */}
         <div className={styles.headerSection}>
           <p className={styles.subTitle}>JOB ANALYZER</p>
           <h1 className={styles.title}>
@@ -23,7 +38,6 @@ export default function FormJobPage() {
             Masukkan lowongan yang sedang kamu pertimbangkan. APPLYWISE akan membantu membaca requirement dan mencocokkannya dengan profilmu.
           </p>
 
-          {/* Floating Feature Indicators */}
           <div className={styles.floatingPillMatch}>
             <span className={styles.dotBlue}></span> MATCH
           </div>
@@ -35,7 +49,7 @@ export default function FormJobPage() {
           </div>
         </div>
 
-        {/* Main Form + History Grid */}
+        {/* Main Grid */}
         <div className={styles.mainGrid}>
           {/* Left Form Section */}
           <div className={styles.formSection}>
@@ -66,38 +80,80 @@ export default function FormJobPage() {
               <div className={styles.tabGroup}>
                 <button
                   type="button"
-                  onClick={() => setActiveTab("text")}
+                  onClick={() => { setActiveTab("text"); setSelectedFile(null); }}
                   className={`${styles.tabBtn} ${activeTab === "text" ? styles.tabActive : ""}`}
                 >
                   PASTE TEXT
                 </button>
                 <button
                   type="button"
-                  onClick={() => setActiveTab("pdf")}
+                  onClick={() => { setActiveTab("pdf"); setSelectedFile(null); }}
                   className={`${styles.tabBtn} ${activeTab === "pdf" ? styles.tabActive : ""}`}
                 >
                   PDF
                 </button>
                 <button
                   type="button"
-                  onClick={() => setActiveTab("screenshot")}
+                  onClick={() => { setActiveTab("screenshot"); setSelectedFile(null); }}
                   className={`${styles.tabBtn} ${activeTab === "screenshot" ? styles.tabActive : ""}`}
                 >
                   SCREENSHOT
                 </button>
               </div>
 
-              <textarea
-                className={styles.textarea}
-                placeholder="Paste deskripsi lowongan pekerjaan di sini..."
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                maxLength={20000}
-              />
+              {/* DYNAMIC CONTENT BERDASARKAN TAB */}
+              {activeTab === "text" && (
+                <>
+                  <textarea
+                    className={styles.textarea}
+                    placeholder="Paste deskripsi lowongan pekerjaan di sini..."
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    maxLength={20000}
+                  />
+                  <div className={styles.charCount}>
+                    {description.length.toLocaleString()} / 20,000
+                  </div>
+                </>
+              )}
 
-              <div className={styles.charCount}>
-                {description.length.toLocaleString()} / 20,000
-              </div>
+              {activeTab === "pdf" && (
+                <div className={styles.uploadArea}>
+                  <input
+                    type="file"
+                    accept=".pdf"
+                    id="pdf-upload"
+                    onChange={handleFileChange}
+                    className="hidden"
+                  />
+                  <label htmlFor="pdf-upload" className={styles.uploadLabel}>
+                    <FileUp size={36} className={styles.uploadIcon} />
+                    <p className={styles.uploadText}>
+                      {selectedFile ? selectedFile.name : "Klik atau seret file PDF lowongan ke sini"}
+                    </p>
+                    <span className={styles.uploadHint}>Mendukung format .pdf (Maks. 10MB)</span>
+                  </label>
+                </div>
+              )}
+
+              {activeTab === "screenshot" && (
+                <div className={styles.uploadArea}>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    id="img-upload"
+                    onChange={handleFileChange}
+                    className="hidden"
+                  />
+                  <label htmlFor="img-upload" className={styles.uploadLabel}>
+                    <ImageIcon size={36} className={styles.uploadIcon} />
+                    <p className={styles.uploadText}>
+                      {selectedFile ? selectedFile.name : "Klik atau seret screenshot lowongan ke sini"}
+                    </p>
+                    <span className={styles.uploadHint}>Mendukung format PNG, JPG, JPEG (Maks. 5MB)</span>
+                  </label>
+                </div>
+              )}
             </div>
 
             {/* Profile Check & Submit Action */}
@@ -113,7 +169,7 @@ export default function FormJobPage() {
               <Link href="/user/job-analyzer/processing" className={styles.submitBtn}>
                 Analisis Lowongan
                 <ArrowRight size={16} />
-                </Link>
+              </Link>
             </div>
 
             <p className={styles.bottomHint}>Bandingkan dengan profilmu</p>
