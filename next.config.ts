@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/marketing/landingpage",
+        permanent: true, // atau false jika halaman utama bersifat dinamis
+      },
+    ];
+  },
 };
 
 export default nextConfig;

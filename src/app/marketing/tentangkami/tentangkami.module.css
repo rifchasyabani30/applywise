@@ -561,3 +561,44 @@
   margin: 0 auto 2rem auto;
   line-height: 1.3;
 }
+
+/* Tambahkan di baris paling bawah tentangkami.module.css */
+
+.footerSection {
+  border-top: 1px solid #e2e8f0;
+  padding: 2rem 1.5rem;
+  background-color: #ffffff;
+  margin-top: 2rem;
+}
+
+.footerContainer {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    flex-direction: row;
+  }
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLink {
+  color: #64748b;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: #2563eb;
+}
