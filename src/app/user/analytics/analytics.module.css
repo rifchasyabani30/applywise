@@ -1,0 +1,683 @@
+.container {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+  box-sizing: border-box;
+  color: #0f172a;
+  font-family: inherit;
+}
+
+/* ========================================================
+   1. EMPTY STATE
+======================================================== */
+.emptyHeroLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 860px) {
+  .emptyHeroLayout {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.categoryTag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #2563eb;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.emptyTitle {
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: #0b1536;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.emptyDesc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0 0 2.5rem;
+}
+
+.emptyCountRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+}
+
+.zeroLarge {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #cbd5e1;
+  line-height: 1;
+}
+
+.zeroLabel {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0b1536;
+}
+
+.emptyIllustrationCard {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 28px;
+  min-height: 380px;
+  box-shadow: 0 15px 45px rgba(37, 99, 235, 0.04);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyDotSmall {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #2563eb;
+  position: absolute;
+  bottom: 25%;
+  left: 20%;
+}
+
+.emptyDotFaint1 {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+.emptyDotFaint2 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  position: absolute;
+  top: 45%;
+  right: 15%;
+}
+
+/* ========================================================
+   2. POPULATED / FILLED STATE
+======================================================== */
+.populatedHeroGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 860px) {
+  .populatedHeroGrid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.heroTitlePopulated {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0b1536;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.blueHighlight {
+  color: #2563eb;
+}
+
+.heroDescPopulated {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 2rem;
+  max-width: 440px;
+}
+
+.heroStatsRow {
+  display: flex;
+  gap: 2rem;
+}
+
+.heroStatItem {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.statLargeNum {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0b1536;
+  line-height: 1;
+}
+
+.statMiniLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+.heroImageCard {
+  width: 100%;
+  height: 240px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Filter Dropdown Bar */
+.filterPillsBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 3.5rem;
+  padding: 0.5rem 0;
+}
+
+.filterShowingLabel {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.filterDropdownSelect {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Section 1: Here's what happened */
+.sectionTitleBlock {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin: 0 0 1.5rem;
+}
+
+.happenedGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .happenedGrid {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+.statListCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.statRowGroup {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.statNumBig {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  min-width: 48px;
+}
+
+.statNumDark {
+  color: #0b1536;
+}
+
+.statNumBlue {
+  color: #2563eb;
+}
+
+.statTitleLabel {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+/* The Hero Metric Card */
+.heroMetricCard {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 2.25rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.04);
+}
+
+.heroMetricTag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #2563eb;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.heroMetricScore {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #0b1536;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.heroMetricScoreSub {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0b1536;
+}
+
+.metricBarHorizontal {
+  height: 3px;
+  background-color: #2563eb;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.heroMetricTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0b1536;
+  margin: 0 0 0.4rem;
+}
+
+.heroMetricDesc {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Section 2: Funnel Flow */
+.funnelCardBox {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+  margin-bottom: 4rem;
+}
+
+.funnelTrackWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.funnelLine {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  background-color: #cbd5e1;
+  z-index: 1;
+}
+
+.funnelNodeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  width: 100px;
+}
+
+.funnelConversionBadge {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+.funnelCircleSolid {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #0d57d5;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(13, 87, 213, 0.25);
+  margin-bottom: 0.5rem;
+}
+
+.funnelCircleHollow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #0d57d5;
+  background-color: #ffffff;
+  color: #0d57d5;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.funnelStepLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #334155;
+  text-align: center;
+}
+
+/* Section 3: Which roles respond to you */
+.roleResponseGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .roleResponseGrid {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.subSectionSub {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: -1rem 0 1.5rem;
+}
+
+.roleProgressList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.roleProgressItem {
+  margin-bottom: 0.25rem;
+}
+
+.roleLabelRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0b1536;
+  margin-bottom: 0.35rem;
+}
+
+.roleBarBg {
+  height: 6px;
+  background-color: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.roleBarFill {
+  height: 100%;
+  background-color: #2563eb;
+  border-radius: 9999px;
+}
+
+/* Insight Cards on Right Side */
+.roleInsightStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.momentumCard {
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem;
+}
+
+.strategyCard {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.cardTagUpper {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin: 0 0 0.25rem;
+}
+
+.cardDesc {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Section 4: Company Signals & ApplyWise Insight */
+.companySignalsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  .companySignalsGrid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.applyWiseInsightCard {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+  border: 1px solid #dbeafe;
+  border-radius: 20px;
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sparkleDecorator {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: #bfdbfe;
+}
+
+.insightCardTag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.insightCardTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0b1536;
+  line-height: 1.4;
+  margin: 0 0 0.85rem;
+  max-width: 320px;
+}
+
+.insightCardBody {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.companySignalsCard {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.companySignalList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.companySignalItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.companySignalItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.companyLeftGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.companyAvatarBox {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyNameTitle {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin: 0 0 0.15rem;
+}
+
+.companyEngagement {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.companyRightScore {
+  text-align: right;
+}
+
+.responseScoreNum {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #2563eb;
+  line-height: 1;
+}
+
+.responseScoreSub {
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Bottom CTA */
+.keepExploringCta {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.ctaHeadline {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin: 0 0 1.25rem;
+}
+
+.openJobAnalyzerBtn {
+  background-color: #0d57d5;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(13, 87, 213, 0.25);
+  transition: background-color 0.2s;
+  font-family: inherit;
+}
+
+.openJobAnalyzerBtn:hover {
+  background-color: #0b47af;
+}

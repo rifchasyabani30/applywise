@@ -37,7 +37,10 @@ export default function UserLayout({
 
           <nav className={styles.navLinks}>
             {navItems.map((item) => {
-              const isActive = pathname === item.href || (item.href === "/user/dashboard" && pathname === "/user");
+              const isActive =
+                pathname === item.href ||
+                (item.href === "/user/dashboard" && pathname === "/user") ||
+                pathname.startsWith(`${item.href}/`);
               return (
                 <Link
                   key={item.href}
@@ -50,10 +53,15 @@ export default function UserLayout({
             })}
           </nav>
 
+          {/* User Menu - Icon Profile sekarang mengarah ke /user/profile */}
           <div className={styles.userMenu}>
-            <button type="button" className={styles.avatarBtn} aria-label="User profile">
+            <Link
+              href="/user/profile"
+              className={styles.avatarBtn}
+              aria-label="User profile"
+            >
               <User size={22} />
-            </button>
+            </Link>
           </div>
         </div>
       </header>

@@ -1,0 +1,292 @@
+/* Container Utama Fullscreen / Centered */
+.fullscreenContainer {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #0f172a;
+}
+
+/* ========================================================
+   1. 404 NOT FOUND
+======================================================== */
+.code404 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #0d57d5;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.waveSvgContainer {
+  width: 100%;
+  max-width: 320px;
+  height: 90px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notFoundTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.notFoundSubtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  max-width: 440px;
+  line-height: 1.55;
+  margin: 0 auto 2.25rem;
+}
+
+.actionsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btnPrimary {
+  background-color: #0d57d5;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(13, 87, 213, 0.25);
+  transition: background-color 0.2s;
+  font-family: inherit;
+}
+
+.btnPrimary:hover {
+  background-color: #0b47af;
+}
+
+.btnGhost {
+  background-color: transparent;
+  color: #0d57d5;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btnGhost:hover {
+  background-color: #f1f5f9;
+}
+
+/* ========================================================
+   2. PRIORITY SCORE LOADING (ANALISIS ULANG)
+======================================================== */
+.priorityHeadline {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0d57d5;
+  margin: 0 0 0.65rem;
+}
+
+.prioritySub {
+  font-size: 0.9rem;
+  color: #64748b;
+  max-width: 540px;
+  line-height: 1.6;
+  margin: 0 auto 3rem;
+}
+
+.nodeCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  height: 280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerCirclePulse {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #e0edff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulseGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  100% { transform: scale(1.08); opacity: 1; box-shadow: 0 0 35px rgba(37, 99, 235, 0.2); }
+}
+
+.calcLabel {
+  position: absolute;
+  top: 68%;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #0d57d5;
+  text-transform: uppercase;
+}
+
+.floatingCardNode {
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 0.65rem 1.15rem;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0b1536;
+}
+
+.nodeMatch {
+  top: 15%;
+  left: 5%;
+}
+
+.nodeRoleFit {
+  top: 30%;
+  right: 5%;
+}
+
+.nodePref {
+  bottom: 5%;
+  left: 0;
+}
+
+.iconCircleBlue {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #0d57d5;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconCircleGray {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #475569;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconCircleCyan {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #60a5fa;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================================
+   3. GENERAL ERROR EXPERIENCE
+======================================================== */
+.errorIllustrationBox {
+  width: 280px;
+  height: 150px;
+  background-color: #e8effe;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.btnSecondaryBlue {
+  background-color: #93c5fd;
+  color: #1e3a8a;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btnSecondaryBlue:hover {
+  background-color: #bfdbfe;
+}
+
+/* ========================================================
+   4. GLOBAL LOADING EXPERIENCE
+======================================================== */
+.brandGlobal {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0d57d5;
+  margin-bottom: 2.5rem;
+}
+
+.timelineTrackSvg {
+  width: 100%;
+  max-width: 650px;
+  margin-bottom: 2rem;
+}
+
+.pulsingDotCenter {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #0d57d5;
+  margin: 0 auto 1.5rem;
+  animation: bounceDot 1.2s infinite ease-in-out;
+}
+
+@keyframes bounceDot {
+  0%, 100% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+.globalHeadline {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #0b1536;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+}
