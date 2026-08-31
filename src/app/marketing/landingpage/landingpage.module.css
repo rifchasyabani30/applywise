@@ -425,6 +425,7 @@
   padding: 5rem 1.5rem;
   background-color: #F9FAFB;
   scroll-margin-top: 5rem;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -433,10 +434,52 @@
   }
 }
 
+/* Container pembungkus utama di dalam section fitur */
+.featuresContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Judul & Subtitle dipaksa rata tengah secara eksplisit */
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
+}
+
+.highlightBlue {
+  color: #2563eb;
+}
+
+.sectionSubtitle {
+  color: #6b7280;
+  max-width: 36rem;
+  margin: 0 auto 4rem auto;
+  font-size: 0.875rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Grid Kartu Fitur */
 .featuresGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -451,16 +494,19 @@
   }
 }
 
+/* Kartu Fitur Rata Tengah Presisi */
 .featureCard {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 1.5rem;
   border: 1px solid rgba(243, 244, 246, 0.8);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
   transition: box-shadow 0.2s;
 }
 
@@ -468,65 +514,21 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.cardIconBlue {
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: #eff6ff;
-  color: #2563eb;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.cardIconEmerald {
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: #ecfdf5;
-  color: #059669;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.cardIconAmber {
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: #fffbeb;
-  color: #d97706;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.cardIconPurple {
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: #faf5ff;
-  color: #9333ea;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
 .cardTitle {
   font-size: 1.125rem;
   font-weight: 700;
   color: #111827;
   margin-bottom: 0.75rem;
+  text-align: center;
+  width: 100%;
 }
 
 .cardDesc {
   font-size: 0.75rem;
   color: #6b7280;
   line-height: 1.625;
+  text-align: center;
+  width: 100%;
 }
 
 /* Footer Section */

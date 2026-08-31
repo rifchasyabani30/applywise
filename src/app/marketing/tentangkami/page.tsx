@@ -1,3 +1,4 @@
+// src/app/marketing/tentangkami/page.tsx
 import Link from 'next/link';
 import { 
   User, 
@@ -11,7 +12,6 @@ import {
   GraduationCap, 
   Folder, 
   Search, 
-  CheckCircle2,
   Sparkles
 } from 'lucide-react';
 import styles from './tentangkami.module.css';
@@ -19,22 +19,6 @@ import styles from './tentangkami.module.css';
 const TentangKamiPage = () => {
   return (
     <div className={styles.container}>
-      {/* Utility Top Bar */}
-      <div className={styles.topNav}>
-        <div className={styles.topNavContainer}>
-          <div>
-            <span className="font-bold text-blue-900">ApplyWise</span>
-            <span className="ml-2 text-gray-400">© 2024 ApplyWise. Intelligent Career Concierge.</span>
-          </div>
-          <div className={styles.topNavLinks}>
-            <Link href="#" className={styles.topNavLink}>Privacy Policy</Link>
-            <Link href="#" className={styles.topNavLink}>Terms of Service</Link>
-            <Link href="#" className={styles.topNavLink}>Contact Us</Link>
-            <Link href="#" className={styles.topNavLink}>Careers</Link>
-          </div>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <span className={styles.pillBadge}>Tentang Kami</span>
@@ -166,7 +150,6 @@ const TentangKamiPage = () => {
             <span>Inti Profil</span>
           </div>
 
-          {/* Satellite Orbit Nodes */}
           <div className={styles.orbitNode} style={{ top: '5%', left: '20%' }}>
             <GraduationCap className="w-3.5 h-3.5 text-blue-600" /> Pendidikan
           </div>
@@ -290,6 +273,22 @@ const TentangKamiPage = () => {
           </Link>
         </div>
       </section>
+
+      {/* FOOTER DI PALING BAWAH */}
+      <footer className={styles.footerSection}>
+        <div className={styles.footerContainer}>
+          <div>
+            <span className="font-bold text-blue-900">ApplyWise</span>
+            <span className="ml-2">© 2024 ApplyWise. Intelligent Career Concierge.</span>
+          </div>
+          <div className={styles.footerLinks}>
+            <Link href="#" className={styles.footerLink}>Privacy Policy</Link>
+            <Link href="#" className={styles.footerLink}>Terms of Service</Link>
+            <Link href="#" className={styles.footerLink}>Contact Us</Link>
+            <Link href="#" className={styles.footerLink}>Careers</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

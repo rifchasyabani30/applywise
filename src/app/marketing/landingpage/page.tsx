@@ -168,7 +168,8 @@ const LandingPage = () => {
 
       {/* Main Features Section */}
       <section id="fitur" className={styles.featuresSection}>
-        <div className="max-w-7xl mx-auto">
+        {/* Menggunakan styles.featuresContainer agar styling CSS Module terbaca penuh */}
+        <div className={styles.featuresContainer}>
           <h2 className={styles.sectionTitle}>
             Fitur <span className={styles.highlightBlue}>Unggulan</span> Kami
           </h2>
