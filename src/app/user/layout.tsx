@@ -10,9 +10,9 @@ const navItems = [
   { label: "Dashboard", href: "/user/dashboard" },
   { label: "Profile", href: "/user/profile" },
   { label: "CV Analyzer", href: "/user/cv-analyzer" },
-  { label: "Job Analyzer", href: "/user/job-analyzer" },
+  { label: "Job Analyzer", href: "/user/job-analyzer/form-job" },
   { label: "Applications", href: "/user/applications" },
-  { label: "Skill Gap", href: "/user/skill-gap" },
+  { label: "Skill Gap", href: "/user/skillgab/firstskillgab" },
   { label: "Analytics", href: "/user/analytics" },
 ];
 

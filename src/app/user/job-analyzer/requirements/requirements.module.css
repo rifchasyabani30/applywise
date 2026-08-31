@@ -1,0 +1,329 @@
+.container {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 65px);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  color: #0f172a;
+}
+
+.inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Top Job Banner */
+.bannerCard {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.bannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.companyLogoPlaceholder {
+  width: 80px;
+  height: 80px;
+  background-color: #f1f5f9;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.jobTitle {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.companyName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.85rem;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.8125rem;
+  color: #64748b;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.bannerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.85rem;
+}
+
+.matchBtn {
+  background-color: #1d4ed8;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.matchBtn:hover {
+  background-color: #1e40af;
+}
+
+.editBtn {
+  background: transparent;
+  border: none;
+  color: #1d4ed8;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.editBtn:hover {
+  text-decoration: underline;
+}
+
+/* Two Column Layout */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .contentGrid {
+    grid-template-columns: 1.8fr 1fr;
+  }
+}
+
+/* Left Section */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.responsibilitiesCard {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.sectionIconBox {
+  width: 32px;
+  height: 32px;
+  background-color: #eff6ff;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.responsibilityList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.checkCircle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.itemText {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Quote Card */
+.quoteCard {
+  border-left: 3px solid #dbeafe;
+  padding: 1rem 1.5rem;
+  font-style: italic;
+  color: #475569;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Right Section */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sideCard {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+}
+
+.sideTitleHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+}
+
+.sideIcon {
+  color: #2563eb;
+}
+
+.subLabel {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.skillsGroup {
+  margin-bottom: 1.5rem;
+}
+
+.pillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pillRequired {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+}
+
+.pillPreferred {
+  background-color: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+}
+
+.cardDivider {
+  height: 1px;
+  background-color: #f1f5f9;
+  margin: 1.5rem 0;
+}
+
+.bodyText {
+  font-size: 0.84375rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  margin-top: 5rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerBrand {
+  font-weight: 800;
+  color: #1d4ed8;
+  font-size: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLink {
+  color: #64748b;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #1d4ed8;
+}

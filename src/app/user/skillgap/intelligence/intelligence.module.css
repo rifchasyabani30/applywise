@@ -1,0 +1,425 @@
+.container {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  background: radial-gradient(circle at 80% 20%, #f1f5f9 0%, #f8fafc 70%);
+  min-height: calc(100vh - 65px);
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  color: #0f172a;
+}
+
+.inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Two Main Columns Grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .mainGrid {
+    grid-template-columns: 1fr 1.35fr;
+  }
+}
+
+/* Left Section */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subHeaderTag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-top: -0.5rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 26rem;
+}
+
+/* Top Priority Big Card */
+.priorityCard {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.priorityCardBgShape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background-color: #f1f5f9;
+  border-bottom-left-radius: 100%;
+  z-index: 0;
+}
+
+.targetIcon {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  color: #64748b;
+  z-index: 1;
+}
+
+.badgePriority {
+  background-color: #fef2f2;
+  color: #dc2626;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.skillNameTitle {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+  margin-bottom: 0.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.skillCategoryLabel {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cardDivider {
+  height: 1px;
+  background-color: #f1f5f9;
+  margin-bottom: 1.25rem;
+}
+
+.statRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.statBigNumber {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.statText {
+  font-size: 0.8125rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* AI Detection Pattern Box */
+.aiPatternCard {
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.aiIconBox {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.aiTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.25rem;
+}
+
+.aiText {
+  font-size: 0.8125rem;
+  color: #3b82f6;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Right Section */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Bubble Canvas Container */
+.bubbleCanvas {
+  background-color: #ffffff;
+  border-radius: 1.75rem;
+  height: 360px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+  overflow: hidden;
+}
+
+/* Bubbles */
+.bubbleRequirement {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  line-height: 1.2;
+}
+
+.bubblePRD {
+  position: absolute;
+  top: 50%;
+  right: 22%;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.bubbleAgile {
+  position: absolute;
+  top: 38%;
+  right: 10%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.1;
+  padding: 0.25rem;
+}
+
+.bubbleSQL {
+  position: absolute;
+  bottom: 18%;
+  left: 24%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.bubbleComm {
+  position: absolute;
+  top: 15%;
+  right: 38%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* Frequency Index Table List */
+.frequencySection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.frequencyIndexHeader {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.frequencyList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.frequencyItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.freqLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.itemNum {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.itemName {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.15rem;
+}
+
+.itemSub {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.freqRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 140px;
+}
+
+.progressTrack {
+  flex: 1;
+  height: 4px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressFillHigh {
+  height: 100%;
+  width: 85%;
+  background-color: #2563eb;
+  border-radius: 9999px;
+}
+
+.progressFillMed {
+  height: 100%;
+  width: 55%;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+}
+
+.progressFillLow {
+  height: 100%;
+  width: 25%;
+  background-color: #93c5fd;
+  border-radius: 9999px;
+}
+
+.levelLabel {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #475569;
+  width: 32px;
+  text-align: right;
+}
+
+/* Footer */
+.footer {
+  margin-top: 6rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerBrand {
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLink {
+  color: #64748b;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #2563eb;
+}

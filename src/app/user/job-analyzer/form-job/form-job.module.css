@@ -1,0 +1,378 @@
+.container {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: calc(100vh - 65px);
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  color: #0f172a;
+}
+
+.inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.headerSection {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.subTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #64748b;
+  max-width: 32rem;
+  line-height: 1.6;
+}
+
+/* Floating Pills */
+.floatingPillMatch {
+  position: absolute;
+  top: 0;
+  right: 25%;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.floatingPillSkills {
+  position: absolute;
+  top: 3.2rem;
+  right: 20%;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.floatingPillInsight {
+  position: absolute;
+  top: 6.5rem;
+  right: 30%;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.dotBlue {
+  width: 5px;
+  height: 5px;
+  background-color: #2563eb;
+  border-radius: 50%;
+}
+
+/* Main Grid Layout */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .mainGrid {
+    grid-template-columns: 1.8fr 1fr;
+  }
+}
+
+/* Form Area */
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.jobTitleInput {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #94a3b8;
+  outline: none;
+}
+
+.jobTitleInput::placeholder {
+  color: #cbd5e1;
+}
+
+.jobMetaRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.metaInputBox {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #64748b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.metaInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.75rem;
+  color: #0f172a;
+  width: 100px;
+}
+
+.metaInput::placeholder {
+  color: #cbd5e1;
+}
+
+/* Textarea Box Card */
+.inputCard {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tabGroup {
+  background-color: #f1f5f9;
+  padding: 0.25rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-self: center;
+  gap: 0.25rem;
+}
+
+.tabBtn {
+  border: none;
+  background: transparent;
+  padding: 0.4rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tabActive {
+  background-color: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 220px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 0.8125rem;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+.textarea::placeholder {
+  color: #cbd5e1;
+}
+
+.charCount {
+  text-align: right;
+  font-size: 0.6875rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Action Area */
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.profileStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.statusBold {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.checkIcon {
+  color: #2563eb;
+}
+
+.submitBtn {
+  background-color: #1d4ed8;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.25);
+  transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: #1e40af;
+}
+
+.bottomHint {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+/* Right Sidebar: Recent History */
+.historySection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.historyTitle {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.historyCard {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+}
+
+.historyJob {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.2rem;
+}
+
+.historyCompany {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.badgeMatchHigh {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.375rem;
+}
+
+.badgeMatchMedium {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.375rem;
+}
+
+.badgeDraft {
+  background-color: #f1f5f9;
+  color: #64748b;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.375rem;
+}
+
+/* Page Footer */
+.footer {
+  margin-top: 5rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerBrand {
+  font-weight: 800;
+  color: #1d4ed8;
+  font-size: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLink {
+  color: #64748b;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #1d4ed8;
+}

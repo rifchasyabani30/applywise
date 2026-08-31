@@ -1,0 +1,212 @@
+.container {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  background: radial-gradient(circle at 50% 30%, #f1f5f9 0%, #f8fafc 70%);
+  min-height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  color: #0f172a;
+}
+
+.inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Glowing Icon Section */
+.iconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.outerRing {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.08);
+}
+
+.innerCircle {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+}
+
+/* Main Title */
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Status List Container */
+.statusList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Status Card Item */
+.statusCard {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.statusCardActive {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+  border: 1px solid #e0e7ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.statusCardActive::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #2563eb;
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+}
+
+.statusCardPending {
+  background: transparent;
+  border-radius: 1.25rem;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid transparent;
+  opacity: 0.5;
+}
+
+/* Icon Styles */
+.checkIcon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #0f172a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.spinnerIcon {
+  color: #2563eb;
+  animation: spin 1.2s linear infinite;
+  flex-shrink: 0;
+}
+
+.pendingIcon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #94a3b8;
+  flex-shrink: 0;
+}
+
+/* Text Styles */
+.statusTextDone {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.statusTextActive {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.statusTextPending {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Page Footer */
+.footer {
+  width: 100%;
+  max-width: 1140px;
+  margin: 4rem auto 0 auto;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerBrand {
+  font-weight: 800;
+  color: #1d4ed8;
+  font-size: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLink {
+  color: #64748b;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #1d4ed8;
+}

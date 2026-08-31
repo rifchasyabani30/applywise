@@ -1,0 +1,252 @@
+.container {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  background: radial-gradient(circle at 70% 30%, #f1f5f9 0%, #f8fafc 60%);
+  min-height: calc(100vh - 65px);
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  color: #0f172a;
+}
+
+.inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Main Grid Layout */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  min-height: 480px;
+}
+
+@media (min-width: 900px) {
+  .mainGrid {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+/* Left Content Section */
+.leftContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillCount {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.infoIcon {
+  color: #2563eb;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.25rem;
+  }
+}
+
+.titleHighlight {
+  color: #2563eb;
+  display: block;
+}
+
+.description {
+  font-size: 0.9375rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 28rem;
+  margin-bottom: 2.5rem;
+}
+
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.btnPrimary {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+  transition: background-color 0.2s;
+}
+
+.btnPrimary:hover {
+  background-color: #1d4ed8;
+}
+
+.btnSecondary {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s;
+}
+
+.btnSecondary:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.footnote {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #94a3b8;
+  line-height: 1.5;
+  max-width: 24rem;
+}
+
+/* Right Interactive Nodes Graphic */
+.graphicContainer {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Big Ambient Soft Blur Circle */
+.ambientBlurCircle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: rgba(226, 232, 240, 0.6);
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.svgLines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Skill Node Items */
+.skillNode {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nodeDotPrimary {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.5);
+}
+
+.nodeDotSecondary {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #60a5fa;
+}
+
+.nodeDotMuted {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #93c5fd;
+}
+
+.nodeDotSmall {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #bfdbfe;
+}
+
+.nodeLabelPrimary {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.nodeLabelMuted {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.nodeLabelLight {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+/* Footer */
+.footer {
+  margin-top: 6rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerBrand {
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLink {
+  color: #64748b;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #2563eb;
+}
