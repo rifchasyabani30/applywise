@@ -29,11 +29,11 @@ export default function FirstSkillGapsPage() {
             </p>
 
             <div className={styles.actionGroup}>
-              <Link href="/user/job-analyzer/formjob" className={styles.btnPrimary}>
+              <Link href="/user/skillgap/intelligence" className={styles.btnPrimary}>
                 Analisis Lowongan
                 <ArrowRight size={16} />
               </Link>
-              <Link href="/user/profile" className={styles.btnSecondary}>
+              <Link href="/user/skillgap/nextintel" className={styles.btnSecondary}>
                 Lengkapi Career Profile
               </Link>
             </div>
@@ -97,18 +97,6 @@ export default function FirstSkillGapsPage() {
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <div className={styles.footerBrand}>ApplyWise</div>
-          <div className={styles.footerLinks}>
-            <Link href="#" className={styles.footerLink}>Privacy Policy</Link>
-            <Link href="#" className={styles.footerLink}>Terms of Service</Link>
-            <Link href="#" className={styles.footerLink}>Help Center</Link>
-            <Link href="#" className={styles.footerLink}>Career Advice</Link>
-          </div>
-          <div>© 2024 ApplyWise AI. All rights reserved.</div>
-        </footer>
       </div>
     </div>
   );

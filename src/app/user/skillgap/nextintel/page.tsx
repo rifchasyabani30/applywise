@@ -140,18 +140,6 @@ export default function NextIntelPage() {
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <div className={styles.footerBrand}>ApplyWise</div>
-          <div className={styles.footerLinks}>
-            <Link href="#" className={styles.footerLink}>Privacy Policy</Link>
-            <Link href="#" className={styles.footerLink}>Terms of Service</Link>
-            <Link href="#" className={styles.footerLink}>Help Center</Link>
-            <Link href="#" className={styles.footerLink}>Career Advice</Link>
-          </div>
-          <div>© 2024 ApplyWise AI. All rights reserved.</div>
-        </footer>
       </div>
     </div>
   );

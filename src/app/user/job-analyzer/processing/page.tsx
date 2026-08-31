@@ -17,22 +17,24 @@ const steps = [
 ];
 
 export default function ProcessingAnalysisPage() {
-  const router = useRouter(); // Perbaikan: menggunakan useRouter()
-  const [currentStepIndex, setCurrentStepIndex] = useState(4); // default di step "Identifying skills"
+  const router = useRouter();
+  const [currentStepIndex, setCurrentStepIndex] = useState(0); // Dimulai dari step pertama
 
   useEffect(() => {
-    // Simulasi progress otomatis berpindah step
     const interval = setInterval(() => {
       setCurrentStepIndex((prev) => {
         if (prev < steps.length - 1) {
           return prev + 1;
         } else {
           clearInterval(interval);
-          // router.push("/user/job-analyzer/result"); // Un-comment jika rute hasil sudah siap
+          // Berpindah ke halaman requirements setelah jeda singkat
+          setTimeout(() => {
+            router.push("/user/job-analyzer/requirements");
+          }, 800);
           return prev;
         }
       });
-    }, 2500);
+    }, 1500); // Kecepatan berpindah per step (1.5 detik)
 
     return () => clearInterval(interval);
   }, [router]);
@@ -95,18 +97,6 @@ export default function ProcessingAnalysisPage() {
           })}
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className={styles.footer}>
-        <div className={styles.footerBrand}>ApplyWise</div>
-        <div className={styles.footerLinks}>
-          <Link href="#" className={styles.footerLink}>Terms</Link>
-          <Link href="#" className={styles.footerLink}>Privacy</Link>
-          <Link href="#" className={styles.footerLink}>Careers</Link>
-          <Link href="#" className={styles.footerLink}>Contact</Link>
-        </div>
-        <div>© 2024 ApplyWise Intelligence. All rights reserved.</div>
-      </footer>
     </div>
   );
 }

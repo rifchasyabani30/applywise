@@ -49,7 +49,7 @@ export default function RequirementsExtractionPage() {
           </div>
 
           <div className={styles.bannerRight}>
-            <Link href="/user/job-analyzer/result" className={styles.matchBtn}>
+            <Link href="/user/job-analyzer/decision" className={styles.matchBtn}>
               <Sparkles size={16} />
               See My Match
             </Link>
@@ -179,18 +179,6 @@ export default function RequirementsExtractionPage() {
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <div className={styles.footerBrand}>ApplyWise</div>
-          <div className={styles.footerLinks}>
-            <Link href="#" className={styles.footerLink}>Terms</Link>
-            <Link href="#" className={styles.footerLink}>Privacy</Link>
-            <Link href="#" className={styles.footerLink}>Careers</Link>
-            <Link href="#" className={styles.footerLink}>Contact</Link>
-          </div>
-          <div>© 2024 ApplyWise Intelligence. All rights reserved.</div>
-        </footer>
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ export default function DecisionPage() {
             </div>
           </div>
 
-          <Link href="#" className={styles.applyBtn}>
+          <Link href="/user/job-analyzer/savejobs" className={styles.applyBtn}>
             APPLY
           </Link>
         </div>
@@ -106,18 +106,6 @@ export default function DecisionPage() {
             </p>
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <div className={styles.footerBrand}>ApplyWise</div>
-          <div className={styles.footerLinks}>
-            <Link href="#" className={styles.footerLink}>Terms</Link>
-            <Link href="#" className={styles.footerLink}>Privacy</Link>
-            <Link href="#" className={styles.footerLink}>Careers</Link>
-            <Link href="#" className={styles.footerLink}>Contact</Link>
-          </div>
-          <div>© 2024 ApplyWise Intelligence. All rights reserved.</div>
-        </footer>
       </div>
     </div>
   );

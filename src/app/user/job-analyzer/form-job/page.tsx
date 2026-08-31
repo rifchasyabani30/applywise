@@ -110,10 +110,10 @@ export default function FormJobPage() {
                 <span className="ml-1 text-gray-400">| Siap dibandingkan</span>
               </div>
 
-              <button type="button" className={styles.submitBtn}>
+              <Link href="/user/job-analyzer/processing" className={styles.submitBtn}>
                 Analisis Lowongan
                 <ArrowRight size={16} />
-              </button>
+                </Link>
             </div>
 
             <p className={styles.bottomHint}>Bandingkan dengan profilmu</p>
@@ -148,18 +148,6 @@ export default function FormJobPage() {
             </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <div className={styles.footerBrand}>ApplyWise</div>
-          <div className={styles.footerLinks}>
-            <Link href="#" className={styles.footerLink}>Terms</Link>
-            <Link href="#" className={styles.footerLink}>Privacy</Link>
-            <Link href="#" className={styles.footerLink}>Careers</Link>
-            <Link href="#" className={styles.footerLink}>Contact</Link>
-          </div>
-          <div>© 2024 ApplyWise Intelligence. All rights reserved.</div>
-        </footer>
       </div>
     </div>
   );

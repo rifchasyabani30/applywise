@@ -263,13 +263,13 @@ export default function SaveJobsPage() {
 
             {/* Submit & Cancel Actions */}
             <div className={styles.actionRow}>
-              <button type="button" className={styles.saveBtn}>
+              <Link href="/user/job-analyzer/form-job" className={styles.saveBtn}>
                 Simpan Lamaran
                 <ArrowRight size={16} />
-              </button>
-              <button type="button" className={styles.cancelBtn}>
+              </Link>
+              <Link href="/user/job-analyzer/decision" className={styles.cancelBtn}>
                 Batal
-              </button>
+              </Link>
             </div>
           </div>
 
