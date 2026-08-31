@@ -31,6 +31,12 @@ const DEGREE_OPTIONS = [
   "Non-formal / Certification",
 ];
 
+interface CertificationItem {
+  title: string;
+  issuer?: string;
+  year?: string;
+}
+
 interface UserProfile {
   personalInfo: {
     fullName: string;
@@ -50,8 +56,8 @@ interface UserProfile {
     description: string;
   }>;
   educations: Array<{
-    degree: string; // Dropdown SD - S3
-    major: string;  // Jurusan / Bidang studi
+    degree: string;
+    major: string;
     institution: string;
     period: string;
   }>;
@@ -71,7 +77,7 @@ interface UserProfile {
     type: string;
     description: string;
   }>;
-  certification?: string;
+  certifications: CertificationItem[];
 }
 
 export default function ProfilePage() {
@@ -141,7 +147,18 @@ export default function ProfilePage() {
           "Cultural preservation platform built with cross-functional design and development teams.",
       },
     ],
-    certification: "BNSP Certified",
+    certifications: [
+      {
+        title: "BNSP Certified System Analyst",
+        issuer: "Badan Nasional Sertifikasi Profesi",
+        year: "2025",
+      },
+      {
+        title: "Scrum Master Certification (PSM I)",
+        issuer: "Scrum.org",
+        year: "2024",
+      },
+    ],
   });
 
   // State sementara saat berada di Profile Builder
@@ -177,7 +194,7 @@ export default function ProfilePage() {
       case 4:
         return "Next: Education";
       case 5:
-        return "Next: Skills";
+        return "Next: Skills & Evidence";
       case 6:
         return "Simpan Profil";
       default:
@@ -306,6 +323,22 @@ export default function ProfilePage() {
     });
   };
 
+  // 7. Certifications: Add & Delete
+  const handleAddCertification = () => {
+    setFormData({
+      ...formData,
+      certifications: [
+        ...formData.certifications,
+        { title: "", issuer: "", year: "" },
+      ],
+    });
+  };
+
+  const handleDeleteCertification = (index: number) => {
+    const updated = formData.certifications.filter((_, i) => i !== index);
+    setFormData({ ...formData, certifications: updated });
+  };
+
   return (
     <div className={styles.mainWrapper}>
       {/* =======================================================
@@ -347,7 +380,7 @@ export default function ProfilePage() {
                   { id: 3, label: "03 Preferences" },
                   { id: 4, label: "04 Experience" },
                   { id: 5, label: "05 Education" },
-                  { id: 6, label: "06 Skills" },
+                  { id: 6, label: "06 Skills & Evidence" },
                 ].map((step) => (
                   <button
                     key={step.id}
@@ -895,12 +928,12 @@ export default function ProfilePage() {
                 </div>
               )}
 
-              {/* STEP 6: SKILLS (Dynamic Add & Delete) */}
+              {/* STEP 6: SKILLS & CERTIFICATIONS */}
               {currentStep === 6 && (
                 <div>
-                  <h2 className={styles.formSectionHeading}>Skills Ecosystem</h2>
+                  <h2 className={styles.formSectionHeading}>Skills & Evidence</h2>
                   <p className={styles.formSectionSub}>
-                    Kelola keahlian metodologi, level kemahiran, dan software tools.
+                    Kelola keahlian metodologi, tools, dan sertifikasi profesional[cite: 5].
                   </p>
 
                   {/* Dynamic Tools Tagging */}
@@ -1012,6 +1045,84 @@ export default function ProfilePage() {
                       className={styles.addItemButton}
                     >
                       <Plus size={16} /> Tambah Methodology Skill
+                    </button>
+                  </div>
+
+                  {/* Dynamic Certifications Section */}
+                  <div style={{ marginTop: "2rem" }}>
+                    <label className={styles.formInputLabel} style={{ marginBottom: "0.75rem", display: "block" }}>
+                      Sertifikasi Profesional (Bisa Ditambah Lebih Dari Satu)
+                    </label>
+
+                    {formData.certifications.map((cert, idx) => (
+                      <div key={idx} className={styles.dynamicItemBox}>
+                        <div className={styles.dynamicItemHeader}>
+                          <span className={styles.itemCountBadge}>Sertifikat #{idx + 1}</span>
+                          {formData.certifications.length > 0 && (
+                            <button
+                              type="button"
+                              onClick={() => handleDeleteCertification(idx)}
+                              className={styles.deleteItemBtn}
+                            >
+                              <Trash2 size={13} /> Hapus
+                            </button>
+                          )}
+                        </div>
+
+                        <div className={styles.formGroup}>
+                          <label className={styles.formInputLabel}>Nama Sertifikat</label>
+                          <input
+                            type="text"
+                            placeholder="Contoh: BNSP Certified System Analyst"
+                            value={cert.title}
+                            onChange={(e) => {
+                              const updated = [...formData.certifications];
+                              updated[idx].title = e.target.value;
+                              setFormData({ ...formData, certifications: updated });
+                            }}
+                            className={styles.textInput}
+                          />
+                        </div>
+
+                        <div className={styles.formRowGrid}>
+                          <div className={styles.formGroup}>
+                            <label className={styles.formInputLabel}>Penerbit / Lembaga (Issuer)</label>
+                            <input
+                              type="text"
+                              placeholder="Contoh: BNSP / Scrum.org"
+                              value={cert.issuer || ""}
+                              onChange={(e) => {
+                                const updated = [...formData.certifications];
+                                updated[idx].issuer = e.target.value;
+                                setFormData({ ...formData, certifications: updated });
+                              }}
+                              className={styles.textInput}
+                            />
+                          </div>
+                          <div className={styles.formGroup}>
+                            <label className={styles.formInputLabel}>Tahun Penerbitan</label>
+                            <input
+                              type="text"
+                              placeholder="Contoh: 2025"
+                              value={cert.year || ""}
+                              onChange={(e) => {
+                                const updated = [...formData.certifications];
+                                updated[idx].year = e.target.value;
+                                setFormData({ ...formData, certifications: updated });
+                              }}
+                              className={styles.textInput}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+
+                    <button
+                      type="button"
+                      onClick={handleAddCertification}
+                      className={styles.addItemButton}
+                    >
+                      <Plus size={16} /> Tambah Sertifikat Baru
                     </button>
                   </div>
                 </div>
@@ -1318,7 +1429,17 @@ export default function ProfilePage() {
 
               {/* Career Evidence */}
               <section>
-                <h3 className={styles.sectionBlockTitle}>Career Evidence</h3>
+                <div className={styles.sectionBlockTitle}>
+                  <span>Career Evidence</span>
+                  <button
+                    type="button"
+                    onClick={() => handleOpenBuilder(6)}
+                    className={styles.manageLink}
+                  >
+                    Edit Sertifikat
+                  </button>
+                </div>
+
                 <div className={styles.evidenceGrid}>
                   {profileData.evidenceProjects.map((project, idx) => (
                     <div key={idx} className={styles.evidenceCard}>
@@ -1334,12 +1455,20 @@ export default function ProfilePage() {
                   ))}
                 </div>
 
-                {profileData.certification && (
-                  <div className={styles.certificationBanner}>
-                    <Award size={16} color="#2563eb" />
-                    <span>{profileData.certification}</span>
-                  </div>
-                )}
+                {/* Multiple Certifications Badges List */}
+                <div className={styles.certificationsList}>
+                  {profileData.certifications.map((cert, idx) => (
+                    <div key={idx} className={styles.certificationBanner}>
+                      <Award size={16} color="#2563eb" />
+                      <span>{cert.title}</span>
+                      {cert.issuer && (
+                        <span className={styles.certIssuerYear}>
+                          • {cert.issuer} {cert.year && `(${cert.year})`}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </section>
             </main>
           </div>
