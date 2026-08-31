@@ -1,29 +1,11 @@
 .main {
-  max-width: 1040px;
+  max-width: 1080px;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding: 2.5rem 1.5rem 5rem;
   box-sizing: border-box;
-}
-
-.stateSelectorContainer {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 1.5rem;
-}
-
-.stateSelector {
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.4rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
-  background-color: #ffffff;
-  color: #334155;
-  outline: none;
-  cursor: pointer;
   font-family: inherit;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  color: #0f172a;
 }
 
 /* ========================================================
@@ -31,29 +13,29 @@
 ======================================================== */
 .emptyHero {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 3.5rem;
 }
 
 .emptyTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 0.75rem;
+  color: #0b1536;
+  margin-bottom: 0.5rem;
 }
 
 .emptySubtitle {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: #2563eb;
   margin-bottom: 0.75rem;
 }
 
 .emptyDesc {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   color: #64748b;
-  max-width: 540px;
-  margin: 0 auto 1.75rem;
+  max-width: 560px;
+  margin: 0 auto 2rem;
   line-height: 1.6;
 }
 
@@ -68,21 +50,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #2563eb;
+  background-color: #0d57d5;
   color: #ffffff;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 4px 14px rgba(13, 87, 213, 0.25);
+  text-decoration: none;
   transition: all 0.2s;
   font-family: inherit;
 }
 
 .primaryBtn:hover {
-  background-color: #1d4ed8;
+  background-color: #0b47af;
 }
 
 .secondaryBtn {
@@ -94,9 +77,10 @@
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   border: 1px solid #e2e8f0;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.2s;
   font-family: inherit;
 }
@@ -109,10 +93,10 @@
 .stepperCard {
   background-color: #ffffff;
   border: 1px solid #f1f5f9;
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-  margin-bottom: 2rem;
+  border-radius: 24px;
+  padding: 2.75rem 2rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+  margin-bottom: 2.5rem;
 }
 
 .stepperTrack {
@@ -127,10 +111,10 @@
 .stepLine {
   position: absolute;
   top: 24px;
-  left: 40px;
-  right: 40px;
+  left: 50px;
+  right: 50px;
   height: 2px;
-  background-color: #e2e8f0;
+  background-color: #cbd5e1;
   z-index: 1;
 }
 
@@ -147,12 +131,12 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #2563eb;
+  background-color: #0d57d5;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 14px rgba(13, 87, 213, 0.3);
   margin-bottom: 0.75rem;
 }
 
@@ -160,7 +144,8 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #f1f5f9;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
   color: #94a3b8;
   display: flex;
   align-items: center;
@@ -170,13 +155,13 @@
 
 .stepLabelActive {
   font-size: 0.8rem;
-  font-weight: 700;
-  color: #2563eb;
+  font-weight: 800;
+  color: #0d57d5;
 }
 
 .stepLabelDisabled {
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #94a3b8;
 }
 
@@ -190,7 +175,7 @@
 .placeholderCard {
   background-color: #ffffff;
   border: 1px solid #f1f5f9;
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
@@ -200,15 +185,15 @@
   align-items: center;
   gap: 0.6rem;
   font-size: 0.95rem;
-  font-weight: 700;
-  color: #1e293b;
+  font-weight: 800;
+  color: #0b1536;
   margin-bottom: 1.25rem;
 }
 
 .placeholderDashedBox {
   border: 1px dashed #cbd5e1;
   border-radius: 12px;
-  padding: 2.25rem 1rem;
+  padding: 2.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,8 +201,8 @@
   gap: 0.6rem;
   color: #94a3b8;
   font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 800;
+  letter-spacing: 0.06em;
 }
 
 /* ========================================================
@@ -239,10 +224,11 @@
 }
 
 .greetingTitle {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  color: #0f172a;
-  margin: 0 0 0.4rem;
+  color: #0b1536;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
 }
 
 .greetingSub {
@@ -254,19 +240,19 @@
 .readinessCard {
   background-color: #ffffff;
   border: 1px solid #f1f5f9;
-  border-radius: 18px;
-  padding: 1.25rem 1.5rem;
+  border-radius: 20px;
+  padding: 1.25rem 1.75rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  min-width: 280px;
+  min-width: 290px;
 }
 
 .readinessHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   color: #64748b;
   margin-bottom: 0.5rem;
 }
@@ -279,14 +265,15 @@
 }
 
 .scoreLarge {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 800;
-  color: #2563eb;
+  color: #0d57d5;
+  line-height: 1;
 }
 
 .progressBarBg {
   flex: 1;
-  height: 8px;
+  height: 6px;
   background-color: #e2e8f0;
   border-radius: 9999px;
   overflow: hidden;
@@ -294,7 +281,7 @@
 
 .progressBarFill {
   height: 100%;
-  background-color: #2563eb;
+  background-color: #0d57d5;
   border-radius: 9999px;
 }
 
@@ -309,7 +296,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #475569;
 }
 
@@ -317,17 +304,17 @@
 .insightBanner {
   background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
   border: 1px solid #dbeafe;
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 24px;
+  padding: 2.25rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   margin-bottom: 2.5rem;
   position: relative;
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 860px) {
   .insightBanner {
     flex-direction: row;
     align-items: center;
@@ -339,30 +326,30 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #2563eb;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #0d57d5;
   margin-bottom: 0.75rem;
 }
 
 .bannerHeadline {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  color: #0f172a;
-  max-width: 440px;
-  line-height: 1.4;
+  color: #0b1536;
+  max-width: 460px;
+  line-height: 1.35;
   margin: 0 0 1.5rem;
 }
 
 .bannerHighlight {
-  color: #2563eb;
+  color: #0d57d5;
   font-style: italic;
 }
 
 .statPillsRow {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .statItem {
@@ -371,33 +358,34 @@
 }
 
 .statValue {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #0b1536;
+  line-height: 1.1;
 }
 
 .statLabel {
   font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   color: #94a3b8;
 }
 
 .glassCardPreview {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 16px;
-  padding: 1.25rem 1.5rem;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
-  min-width: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.06);
+  min-width: 270px;
 }
 
 .glassHeader {
   font-size: 0.75rem;
-  font-weight: 700;
-  color: #334155;
-  margin-bottom: 0.75rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin-bottom: 1rem;
 }
 
 .glassRow {
@@ -405,15 +393,15 @@
   align-items: center;
   justify-content: space-between;
   font-size: 0.8rem;
-  color: #64748b;
-  margin-bottom: 0.5rem;
+  color: #475569;
+  margin-bottom: 0.6rem;
 }
 
 .dotBlueSmall {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #2563eb;
+  background-color: #0d57d5;
   display: inline-block;
   margin-right: 0.4rem;
 }
@@ -427,7 +415,7 @@
   margin-right: 0.4rem;
 }
 
-/* Two Columns Section (Recent Opps & Skill Signals) */
+/* Two Columns Section */
 .twoColGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -442,10 +430,10 @@
 }
 
 .sectionTitle {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin-bottom: 1.25rem;
 }
 
 .opportunityList {
@@ -457,12 +445,19 @@
 .opportunityCard {
   background-color: #ffffff;
   border: 1px solid #f1f5f9;
-  border-radius: 14px;
-  padding: 1rem;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+
+.opportunityCard:hover {
+  border-color: #bfdbfe;
 }
 
 .opportunityLeft {
@@ -472,9 +467,9 @@
 }
 
 .oppIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
   background-color: #f8fafc;
   border: 1px solid #e2e8f0;
   display: flex;
@@ -484,9 +479,9 @@
 }
 
 .oppRole {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #0f172a;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0b1536;
   margin-bottom: 0.2rem;
 }
 
@@ -497,11 +492,11 @@
 
 .badgeMatchPill {
   font-size: 0.7rem;
-  font-weight: 700;
-  color: #2563eb;
+  font-weight: 800;
+  color: #0d57d5;
   background-color: #eff6ff;
   border: 1px solid #bfdbfe;
-  padding: 0.25rem 0.6rem;
+  padding: 0.25rem 0.65rem;
   border-radius: 9999px;
   margin-right: 0.5rem;
 }
@@ -515,10 +510,10 @@
 
 .tagBlue {
   background-color: #eff6ff;
-  color: #2563eb;
+  color: #0d57d5;
   border: 1px solid #dbeafe;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.35rem 0.75rem;
   border-radius: 8px;
 }
@@ -528,7 +523,7 @@
   color: #ef4444;
   border: 1px solid #fee2e2;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.35rem 0.75rem;
   border-radius: 8px;
   display: inline-flex;
@@ -537,51 +532,53 @@
 }
 
 .skillCaption {
-  font-size: 0.8rem;
+  font-size: 0.825rem;
   color: #64748b;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* Center Bottom Funnel CTA */
 .funnelBottomCta {
   text-align: center;
-  padding: 2rem 0;
+  padding: 3rem 0 1rem;
 }
 
 .funnelIconCircle {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background-color: #2563eb;
+  background-color: #0d57d5;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 0.75rem;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  margin: 0 auto 0.85rem;
+  box-shadow: 0 4px 14px rgba(13, 87, 213, 0.3);
 }
 
 .funnelSub {
   font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   color: #94a3b8;
+  text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
 
 .funnelMainCount {
   font-size: 0.95rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #0b1536;
   margin-bottom: 1.25rem;
 }
 
 .funnelHeadline {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  color: #0f172a;
-  max-width: 440px;
-  margin: 0 auto 1.25rem;
+  color: #0b1536;
+  max-width: 460px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.35;
 }
 
 /* ========================================================
@@ -593,10 +590,10 @@
   gap: 0.35rem;
   background-color: #eff6ff;
   border: 1px solid #bfdbfe;
-  color: #2563eb;
+  color: #0d57d5;
   font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.25rem 0.6rem;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
   border-radius: 9999px;
   margin-bottom: 0.5rem;
 }
@@ -617,30 +614,30 @@
 .aiPriorityCard {
   background-color: #ffffff;
   border: 1px solid #f1f5f9;
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 24px;
+  padding: 2.25rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
 
 .aiPriorityTitle {
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #0b1536;
   line-height: 1.35;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.5rem;
 }
 
 .reasonGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-bottom: 1.75rem;
-  font-size: 0.8rem;
+  font-size: 0.825rem;
 }
 
 .reasonTitle {
-  font-weight: 700;
-  color: #1e293b;
+  font-weight: 800;
+  color: #0b1536;
   margin-bottom: 0.3rem;
   display: flex;
   align-items: center;
@@ -649,12 +646,13 @@
 
 .reasonDesc {
   color: #64748b;
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0;
 }
 
 .statsBarRow {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.85rem;
 }
 
@@ -663,12 +661,9 @@
   border: 1px solid #dbeafe;
   border-radius: 10px;
   padding: 0.5rem 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
   font-size: 0.75rem;
-  font-weight: 700;
-  color: #2563eb;
+  font-weight: 800;
+  color: #0d57d5;
 }
 
 .statBoxGray {
@@ -676,23 +671,17 @@
   border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 0.5rem 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #334155;
 }
 
 .statBoxSolidBlue {
-  background-color: #2563eb;
+  background-color: #0d57d5;
   border-radius: 10px;
   padding: 0.5rem 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #ffffff;
 }
 
@@ -700,12 +689,12 @@
 .darkMatchCard {
   background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   color: #ffffff;
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
 }
 
 .darkMatchHeader {
@@ -716,8 +705,8 @@
 }
 
 .darkMatchTag {
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.65rem;
+  font-weight: 800;
   letter-spacing: 0.08em;
   color: #94a3b8;
 }
@@ -727,14 +716,14 @@
   border: 1px solid #3b82f6;
   color: #60a5fa;
   font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.2rem 0.5rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
   border-radius: 9999px;
 }
 
 .darkRoleTitle {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #ffffff;
   margin: 0 0 0.25rem;
 }
@@ -767,14 +756,13 @@
   border-radius: 10px;
   padding: 0.65rem;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
-  transition: background-color 0.2s;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
   font-family: inherit;
-}
-
-.darkReviewBtn:hover {
-  background-color: #bfdbfe;
 }
 
 /* 4 Metrics Metric Cards Grid */
@@ -794,25 +782,26 @@
 .metricCard {
   background-color: #ffffff;
   border: 1px solid #f1f5f9;
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 1.25rem;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
 .metricIcon {
-  color: #2563eb;
+  color: #0d57d5;
   margin-bottom: 0.5rem;
 }
 
 .metricValue {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #0b1536;
 }
 
 .metricLabel {
-  font-size: 0.7rem;
+  font-size: 0.725rem;
+  font-weight: 600;
   color: #64748b;
 }
 
@@ -852,14 +841,14 @@
 
 .pipelineLabel {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #1e293b;
 }
 
 .pipelineValue {
   font-size: 0.85rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #0b1536;
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -867,7 +856,7 @@
 
 .pipelinePercentage {
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #64748b;
 }
 
@@ -886,7 +875,7 @@
 
 .radarCategoryTitle {
   font-size: 0.65rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
   color: #64748b;
   margin-bottom: 0.4rem;
@@ -916,8 +905,8 @@
 }
 
 .patternIcon {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 12px;
   background-color: #bfdbfe;
   color: #1d4ed8;
@@ -929,15 +918,15 @@
 
 .patternTitle {
   font-size: 0.95rem;
-  font-weight: 700;
-  color: #0f172a;
+  font-weight: 800;
+  color: #0b1536;
   margin: 0 0 0.35rem;
 }
 
 .patternDesc {
   font-size: 0.75rem;
   color: #64748b;
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0;
 }
 
@@ -958,7 +947,7 @@
 
 .actionTag {
   font-size: 0.65rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
   color: #64748b;
   display: flex;
@@ -973,7 +962,7 @@
   background-color: #ef4444;
   color: #ffffff;
   font-size: 0.65rem;
-  font-weight: 700;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -981,8 +970,8 @@
 
 .actionTitle {
   font-size: 0.95rem;
-  font-weight: 700;
-  color: #0f172a;
+  font-weight: 800;
+  color: #0b1536;
   margin: 0 0 1rem;
 }
 
@@ -1005,7 +994,7 @@
 
 .actionCompany {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #1e293b;
 }
 
@@ -1016,17 +1005,18 @@
 
 .actionSubmitBtn {
   width: 100%;
-  background-color: #2563eb;
+  background-color: #0d57d5;
   color: #ffffff;
   border: none;
   border-radius: 10px;
   padding: 0.7rem;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
+  text-decoration: none;
   font-family: inherit;
 }
