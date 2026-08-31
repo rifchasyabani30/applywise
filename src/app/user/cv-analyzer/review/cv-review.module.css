@@ -1,0 +1,584 @@
+.container {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 7rem;
+  box-sizing: border-box;
+  color: #0f172a;
+  font-family: inherit;
+  position: relative;
+}
+
+/* Header Top */
+.reviewTopSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .reviewTopSection {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.reviewTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin: 0 0 0.65rem;
+  line-height: 1.15;
+}
+
+.reviewDesc {
+  font-size: 0.85rem;
+  color: #64748b;
+  max-width: 520px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.completenessCard {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.05);
+  min-width: 220px;
+  text-align: center;
+}
+
+.pdfInfoTag {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.85rem;
+}
+
+.completenessCircle {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: 5px solid #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin: 0 auto 0.4rem;
+}
+
+.completenessLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+/* Sections */
+.reviewSectionBlock {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 18px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s;
+}
+
+.reviewSectionBlock:hover {
+  border-color: #dbeafe;
+}
+
+.sectionHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.sectionTagNumber {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.editInlineBtn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.editInlineBtn:hover {
+  background-color: #eff6ff;
+}
+
+.addInlineBtn {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.addInlineBtn:hover {
+  background-color: #dbeafe;
+}
+
+.reviewGrid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .reviewGrid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.reviewFieldTitle {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.reviewFieldValue {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0b1536;
+}
+
+.reviewFieldSub {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.2rem;
+}
+
+/* Timeline / Item Cards */
+.reviewTimelineCard {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.bulletSquare {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background-color: #2563eb;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.reviewRole {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0b1536;
+}
+
+.reviewCompany {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.35rem;
+}
+
+.reviewDescText {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Project Technologies Keyword Tags */
+.techChipsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.techChipLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.2rem;
+}
+
+.techKeywordPill {
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+.itemActionBtns {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.iconOnlyBtn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.iconOnlyBtn:hover {
+  color: #2563eb;
+}
+
+.iconDeleteBtn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.iconDeleteBtn:hover {
+  background-color: #fee2e2;
+}
+
+/* Skills Grid */
+.skillsColsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 680px) {
+  .skillsColsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skillSubCategory {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.skillPillsFlex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skillTagPill {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #334155;
+  padding: 0.3rem 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.removeSkillBtn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Modal Popup Editor */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1.5rem;
+}
+
+.modalBox {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 540px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin: 0;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.inputLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.inputControl {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.825rem;
+  font-family: inherit;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.inputControl:focus {
+  border-color: #2563eb;
+}
+
+.selectControl {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.825rem;
+  font-family: inherit;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.textareaControl {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.825rem;
+  font-family: inherit;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+  min-height: 90px;
+  resize: vertical;
+}
+
+.textareaControl:focus {
+  border-color: #2563eb;
+}
+
+/* Modal Chip Input for Technologies */
+.chipInputRow {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.chipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+
+.modalKeywordChip {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.modalActionRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.modalCancelBtn {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modalSaveBtn {
+  background-color: #0d57d5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Save Bottom Action */
+.allSetActionBox {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.allSetHeading {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0b1536;
+  margin: 0 0 0.4rem;
+}
+
+.allSetSub {
+  font-size: 0.8rem;
+  color: #64748b;
+  max-width: 440px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
+
+.saveProfileBtn {
+  background-color: #0d57d5;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.8rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(13, 87, 213, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: inherit;
+  transition: background-color 0.2s;
+}
+
+.saveProfileBtn:hover {
+  background-color: #0b47af;
+}
+
+/* Floating Bottom Status Bar */
+.bottomFloatingBar {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  z-index: 40;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.changesCountText {
+  color: #64748b;
+}
+
+.discardChangesBtn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.saveDraftSmallBtn {
+  background-color: #0d57d5;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
