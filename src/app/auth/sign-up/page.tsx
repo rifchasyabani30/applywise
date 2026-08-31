@@ -2,10 +2,13 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { User, Mail, Lock, Sparkles, ArrowRight } from "lucide-react";
 import styles from "./signup.module.css";
 
 export default function SignUpPage() {
+  const router = useRouter();
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,14 +17,21 @@ export default function SignUpPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Sign Up Submitted:", { firstName, lastName, email, password });
+
+    // Redirect langsung ke dashboard pengguna (empty state)
+    router.push("/user/dashboard");
   };
 
   const handleGoogleClick = () => {
     console.log("Daftar dengan Google diklik");
+    // Redirect langsung ke dashboard pengguna
+    router.push("/user/dashboard");
   };
 
   const handleAppleClick = () => {
     console.log("Daftar dengan Apple diklik");
+    // Redirect langsung ke dashboard pengguna
+    router.push("/user/dashboard");
   };
 
   return (

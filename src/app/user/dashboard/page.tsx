@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
+import Link from "next/link";
 import {
   Briefcase,
   User,
@@ -18,51 +19,69 @@ import {
   Award,
   Clock,
   MoreHorizontal,
-  Compass,
 } from "lucide-react";
 import styles from "./dashboard.module.css";
 
-// Interface data user untuk menentukan logic state dashboard
 interface UserData {
   name: string;
   isProfileComplete: boolean;
   hasUploadedCV: boolean;
-  preferencesSetCount: number; // Misal 0 sampai 5
+  preferencesSetCount: number;
   totalAnalyzedJobs: number;
   totalApplicationsSent: number;
 }
 
 export default function DashboardPage() {
-  // Contoh data user (dapat dihubungkan dengan state global, API, atau database)
-  const userData: UserData = {
-    name: "Alex",
-    isProfileComplete: true,
-    hasUploadedCV: true,
-    preferencesSetCount: 3,
-    totalAnalyzedJobs: 12,
-    totalApplicationsSent: 8,
-  };
+  // Default state untuk user baru (belum upload CV & profil belum lengkap -> EMPTY STATE)
+  const [userData, setUserData] = useState<UserData>({
+    name: "User",
+    isProfileComplete: false,
+    hasUploadedCV: false,
+    preferencesSetCount: 0,
+    totalAnalyzedJobs: 0,
+    totalApplicationsSent: 0,
+  });
 
-  // Logic penentuan state dashboard secara dinamis
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    // Cek apakah ada data user di localStorage (misal setelah registrasi atau login)
+    const storedUser = localStorage.getItem("applywise_user_profile");
+    if (storedUser) {
+      try {
+        const parsed = JSON.parse(storedUser);
+        setUserData(parsed);
+      } catch {
+        // Fallback default
+      }
+    }
+  }, []);
+
+  // LOGIK CONDITIONAL RENDERING OTOMATIS SESUAI STATUS USER
   const dashboardState = useMemo<"empty" | "partial" | "populated">(() => {
-    // 1. Jika belum mengisi profil atau belum upload CV -> Empty State
-    if (!userData.isProfileComplete || !userData.hasUploadedCV) {
+    // 1. User baru / Belum upload CV / Profil belum lengkap -> EMPTY STATE
+    if (!userData.hasUploadedCV || !userData.isProfileComplete) {
       return "empty";
     }
 
-    // 2. Jika profil sudah ada tetapi riwayat analisis/lamaran masih sedikit -> Partial State
+    // 2. Sudah ada CV dan profil tetapi aktivitas analisis masih awal/sedikit -> PARTIAL STATE
     if (userData.totalAnalyzedJobs < 5 || userData.totalApplicationsSent < 3) {
       return "partial";
     }
 
-    // 3. Jika sudah aktif menganalisis lowongan dan mengirim lamaran -> Populated State
+    // 3. Profil lengkap dan riwayat aktivitas sudah aktif -> POPULATED STATE
     return "populated";
   }, [userData]);
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <div className={styles.main}>
       {/* =======================================================
-          KONDISI 1: EMPTY STATE
+          KONDISI 1: EMPTY STATE (BARU REGISTER / BELUM UPLOAD CV)
       ======================================================= */}
       {dashboardState === "empty" && (
         <div>
@@ -71,17 +90,17 @@ export default function DashboardPage() {
             <h2 className={styles.emptySubtitle}>Perjalanan kariermu baru dimulai.</h2>
             <p className={styles.emptyDesc}>
               Lengkapi profil dan mulai eksplorasi peluang kerja untuk mendapatkan insight yang
-              lebih personal dari APPLYWISE.
+              lebih personal dari APPLYWISE[cite: 10].
             </p>
             <div className={styles.emptyActionGroup}>
-              <button type="button" className={styles.primaryBtn}>
+              <Link href="/user/profile" className={styles.primaryBtn}>
                 <span>Mulai Bangun Profil</span>
                 <ArrowRight size={16} />
-              </button>
-              <button type="button" className={styles.secondaryBtn}>
-                <FileText size={16} />
+              </Link>
+              <Link href="/user/cv-analyzer" className={styles.secondaryBtn}>
+                <FileText size={16} color="#2563eb" />
                 <span>Upload CV</span>
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -159,7 +178,7 @@ export default function DashboardPage() {
       )}
 
       {/* =======================================================
-          KONDISI 2: PARTIAL DATA
+          KONDISI 2: PARTIAL DATA STATE (BARU SEBAGIAN AKTIVITAS)
       ======================================================= */}
       {dashboardState === "partial" && (
         <div>
@@ -167,7 +186,7 @@ export default function DashboardPage() {
             <div>
               <h1 className={styles.greetingTitle}>Halo, {userData.name}.</h1>
               <p className={styles.greetingSub}>
-                Beberapa pola mulai terlihat dari perjalanan kariermu.
+                Beberapa pola mulai terlihat dari perjalanan kariermu[cite: 10].
               </p>
             </div>
 
@@ -219,7 +238,7 @@ export default function DashboardPage() {
               </div>
             </div>
 
-            {/* Glass Box */}
+            {/* Match Intelligence Glass Box */}
             <div className={styles.glassCardPreview}>
               <div className={styles.glassHeader}>Match Intelligence</div>
               <div className={styles.glassRow}>
@@ -246,7 +265,7 @@ export default function DashboardPage() {
             <div>
               <h3 className={styles.sectionTitle}>Recent Opportunities</h3>
               <div className={styles.opportunityList}>
-                <div className={styles.opportunityCard}>
+                <Link href="/user/applications" className={styles.opportunityCard}>
                   <div className={styles.opportunityLeft}>
                     <div className={styles.oppIcon}>
                       <Briefcase size={18} />
@@ -260,9 +279,9 @@ export default function DashboardPage() {
                     <span className={styles.badgeMatchPill}>88% Match</span>
                     <ArrowRight size={16} color="#94a3b8" />
                   </div>
-                </div>
+                </Link>
 
-                <div className={styles.opportunityCard}>
+                <Link href="/user/applications" className={styles.opportunityCard}>
                   <div className={styles.opportunityLeft}>
                     <div className={styles.oppIcon}>
                       <Briefcase size={18} />
@@ -276,7 +295,7 @@ export default function DashboardPage() {
                     <span className={styles.badgeMatchPill}>79% Match</span>
                     <ArrowRight size={16} color="#94a3b8" />
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -306,18 +325,18 @@ export default function DashboardPage() {
               {userData.totalApplicationsSent} Application Submitted
             </div>
             <h2 className={styles.funnelHeadline}>
-              Analisis lebih banyak lowongan untuk memperkuat insight.
+              Analisis lebih banyak lowongan untuk memperkuat insight[cite: 10].
             </h2>
-            <button type="button" className={styles.primaryBtn}>
+            <Link href="/user/job-analyzer" className={styles.primaryBtn}>
               <Search size={16} />
               <span>Mulai Analisis Baru</span>
-            </button>
+            </Link>
           </div>
         </div>
       )}
 
       {/* =======================================================
-          KONDISI 3: POPULATED STATE
+          KONDISI 3: POPULATED STATE (DATA LENGKAP & AKTIF)
       ======================================================= */}
       {dashboardState === "populated" && (
         <div>
@@ -328,14 +347,9 @@ export default function DashboardPage() {
               </span>
               <h1 className={styles.greetingTitle}>Halo, {userData.name}.</h1>
               <p className={styles.greetingSub}>
-                Berikut insight yang paling penting dari perjalanan pencarian kerjamu.
+                Berikut insight yang paling penting dari perjalanan pencarian kerjamu[cite: 10].
               </p>
             </div>
-
-            <button type="button" className={styles.primaryBtn}>
-              <Compass size={16} />
-              <span>Explore Roles</span>
-            </button>
           </div>
 
           {/* Top Priority Grid */}
@@ -391,13 +405,13 @@ export default function DashboardPage() {
                   <span className={styles.darkMiniTag}>Agile</span>
                 </div>
               </div>
-              <button type="button" className={styles.darkReviewBtn}>
+              <Link href="/user/applications" className={styles.darkReviewBtn}>
                 Review Match
-              </button>
+              </Link>
             </div>
           </div>
 
-          {/* 4 Metrics Metric Cards */}
+          {/* 4 Metrics Cards */}
           <div className={styles.fourMetricsGrid}>
             <div className={styles.metricCard}>
               <Search size={22} className={styles.metricIcon} />
@@ -510,7 +524,7 @@ export default function DashboardPage() {
                 <p className={styles.patternDesc}>
                   <strong>SQL</strong> is increasingly mentioned in recent high-match jobs. While
                   you have basic coverage, upgrading to &apos;Advanced&apos; could unlock 3 more Senior
-                  roles.
+                  roles[cite: 10].
                 </p>
               </div>
             </div>
@@ -523,7 +537,7 @@ export default function DashboardPage() {
                 <span className={styles.badgeRedNumber}>2</span>
               </div>
               <h4 className={styles.actionTitle}>
-                2 lamaran mungkin perlu kamu tindak lanjuti
+                2 lamaran mungkin perlu kamu tindak lanjuti[cite: 10]
               </h4>
 
               <div className={styles.actionItemList}>
@@ -543,10 +557,10 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              <button type="button" className={styles.actionSubmitBtn}>
+              <Link href="/user/applications" className={styles.actionSubmitBtn}>
                 <Send size={14} />
                 <span>Follow Up lamaran pending</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
